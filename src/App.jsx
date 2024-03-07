@@ -11,7 +11,7 @@ import styles from "./App.module.scss";
 function App() {
   return (
     <>
-      <Router basename="/stranger-h205">
+      <Router>
         <div className={`${styles.main}`}>
           <div className={`${styles.container__particules}`}>
             {Array.from({ length: 100 }, (_, i) => (
