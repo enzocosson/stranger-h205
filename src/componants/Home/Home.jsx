@@ -75,17 +75,6 @@ export function Home() {
               &ldquo;sortir&ldquo; de cet espace après avoir accompli au moins
               quatre actions spécifiques.
             </p>
-            <p className={styles.paragraphe__2}>
-              - La recherche d&apos;une clé dissimulée, que ce soit dans un
-              tiroir ou sous un objet. <br />
-              - L&apos;insertion de la clé dans une serrure.
-              <br />
-              - L&apos;ouverture d&apos;une porte qui reste fermée tant que la
-              clé n&apos;est pas insérée correctement. <br />
-              - La découverte d&apos;un code et son entrée sur un clavier ou des
-              roues codées.
-              <br />
-            </p>
             <div className={styles.container__btns}>
               <button className={styles.btn__play}>En savoir plus</button>
               <button className={styles.btn__download}>
