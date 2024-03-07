@@ -3,7 +3,7 @@ import { useEffect, useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sparkles } from "@react-three/drei";
 
-import { Room } from "../Room/Room-comp-v3";
+import { Room } from "../Room/Room-comp-max";
 
 import styles from "./Map.module.scss";
 
