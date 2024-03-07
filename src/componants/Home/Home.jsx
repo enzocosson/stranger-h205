@@ -50,12 +50,12 @@ export function Home() {
           <div className={styles.container__text}>
             <img
               className={styles.logo__title}
-              src="images/logo-title.png"
+              src="images/logo-title.webp"
               alt=""
             />
             <div className={styles.genre}>
               <div className={styles.logo__netflix}>
-                <img src="images/logo-n.png" alt="" />
+                <img src="images/logo-n.webp" alt="" />
                 <span>GAMES</span>
               </div>
 
@@ -97,7 +97,7 @@ export function Home() {
         <div className={styles.illustration} style={{ perspective: "1000px" }}>
           <img
             className={`${styles.card} ${styles.card__3}`}
-            src="images/card-3.png"
+            src="images/card-3.webp"
             alt="card"
             style={{
               transform: `translate(-50%, -50%) translate(${cardStyles.card3.x}px, ${cardStyles.card3.y}px) rotateX(${cardStyles.card3.rotationX}deg) rotateY(${cardStyles.card3.rotationY}deg)`,
@@ -105,7 +105,7 @@ export function Home() {
           />
           <img
             className={`${styles.card} ${styles.card__2}`}
-            src="images/card-2.png"
+            src="images/card-2.webp"
             alt="card"
             style={{
               transform: `translate(-50%, -50%) translate(${cardStyles.card2.x}px, ${cardStyles.card2.y}px) rotateX(${cardStyles.card2.rotationX}deg) rotateY(${cardStyles.card2.rotationY}deg)`,
@@ -113,7 +113,7 @@ export function Home() {
           />
           <img
             className={`${styles.card} ${styles.card__1}`}
-            src="images/card-1.png"
+            src="images/card-1.webp"
             alt="card"
             style={{
               transform: `translate(-50%, -50%) translate(${cardStyles.card1.x}px, ${cardStyles.card1.y}px) rotateX(${cardStyles.card1.rotationX}deg) rotateY(${cardStyles.card1.rotationY}deg)`,

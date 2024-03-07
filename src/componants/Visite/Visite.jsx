@@ -10,7 +10,7 @@ import {
   Vignette,
 } from "@react-three/postprocessing";
 import { OrbitControls, Sparkles } from "@react-three/drei";
-import { Quest3 } from "../Quest3/Quest3";
+import { Quest3 } from "../Quest3/Quest3-comp";
 import gsap from "gsap";
 import styles from "./Visite.module.scss";
 
@@ -103,7 +103,7 @@ export function Visite() {
       </Canvas>
       <div className={styles.container}>
         <div className={styles.presentation}>
-          <img className={styles.logo} src="images/visite-3d.png" alt="" />
+          <img className={styles.logo} src="images/visite-3d.webp" alt="" />
           <div className={styles.button}>SCROLL</div>
         </div>
       </div>

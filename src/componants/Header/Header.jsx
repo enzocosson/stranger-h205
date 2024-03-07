@@ -10,7 +10,7 @@ export function Header() {
     <div className={`${styles.container__header}`}>
       <div className={`${styles.main}`}>
         <NavLink to="/" className={`${styles.logo}`}>
-          <img src="images/logo.png" alt="logo" />
+          <img src="images/logo.webp" alt="logo" />
         </NavLink>
         <div className={`${styles.nav}`}>
           <NavLink

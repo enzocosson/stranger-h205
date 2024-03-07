@@ -79,7 +79,7 @@ export function Map() {
         >
           <img
             className={styles.filter__vr}
-            src="images/filter-vr-2.png"
+            src="images/filter-vr-2.webp"
             alt=""
           />
 
