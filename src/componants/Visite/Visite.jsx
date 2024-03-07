@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { useRef } from "react";
-
+import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import {
   Bloom,
@@ -12,10 +12,47 @@ import {
 import { OrbitControls, Sparkles } from "@react-three/drei";
 import { Quest3 } from "../Quest3/Quest3";
 import gsap from "gsap";
-
 import styles from "./Visite.module.scss";
 
 export function Visite() {
+  const [isBottomVisible, setIsBottomVisible] = useState(false);
+  const bottomRef = useRef(null);
+  const navigate = useNavigate();
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.offsetHeight;
+
+    const bottomPosition = scrollY + windowHeight;
+
+    setIsBottomVisible(bottomPosition >= documentHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isBottomVisible) {
+      bottomRef.current.classList.add(styles.black__transition__active);
+
+      const redirectTimer = setTimeout(() => {
+        navigate("/map");
+      }, 300);
+
+      return () => clearTimeout(redirectTimer);
+    } else {
+      bottomRef.current.classList.remove(styles.black__transition__active);
+    }
+  }, [isBottomVisible]);
+
   return (
     <>
       <Canvas
@@ -66,12 +103,11 @@ export function Visite() {
       </Canvas>
       <div className={styles.container}>
         <div className={styles.presentation}>
-          <img className={styles.logo} src="/images/visite-3d.png" alt="" />
-          <div className={styles.button}>
-            SCROLL
-          </div>
+          <img className={styles.logo} src="images/visite-3d.png" alt="" />
+          <div className={styles.button}>SCROLL</div>
         </div>
       </div>
+      <div ref={bottomRef} className={styles.black__transition}></div>
     </>
   );
 }

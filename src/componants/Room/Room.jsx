@@ -17,37 +17,37 @@ export function Room(props) {
   const mouseX = useRef(0);
   const mouseY = useRef(0);
 
-  // useEffect(() => {
-  //   const onMouseMove = (event) => {
-  //     mouseX.current = (event.clientX / window.innerWidth) * 2 - 1;
-  //     mouseY.current = (event.clientY / window.innerHeight) * 2 - 1;
-  //     setAnimate(true);
-  //   };
+  useEffect(() => {
+    const onMouseMove = (event) => {
+      mouseX.current = (event.clientX / window.innerWidth) * 2 - 1;
+      mouseY.current = (event.clientY / window.innerHeight) * 2 - 1;
+      setAnimate(true);
+    };
 
-  //   const update = () => {
-  //     if (animate) {
-  //       const mouvementCoefficient = 0.5;
+    const update = () => {
+      if (animate) {
+        const mouvementCoefficient = 0.5;
 
-  //       gsap.to(map.current.position, {
-  //         duration: 1,
-  //         x: -mouseX.current * mouvementCoefficient + 3,
-  //         y: mouseY.current * mouvementCoefficient - 6.5,
-  //         ease: "power3.out",
-  //       });
-  //       setAnimate(false);
-  //     }
+        gsap.to(map.current.position, {
+          duration: 1,
+          x: -mouseX.current * mouvementCoefficient + 3,
+          y: mouseY.current * mouvementCoefficient - 6.5,
+          ease: "power3.out",
+        });
+        setAnimate(false);
+      }
 
-  //     gl.render(scene, camera);
-  //     requestAnimationFrame(update);
-  //   };
+      gl.render(scene, camera);
+      requestAnimationFrame(update);
+    };
 
-  //   window.addEventListener("mousemove", onMouseMove, false);
-  //   update();
+    window.addEventListener("mousemove", onMouseMove, false);
+    update();
 
-  //   return () => {
-  //     window.removeEventListener("mousemove", onMouseMove, false);
-  //   };
-  // }, [animate, camera, gl, scene]);
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove, false);
+    };
+  }, [animate, camera, gl, scene]);
 
   return (
     <group {...props} dispose={null} ref={map}>

@@ -2,15 +2,16 @@ import { Header } from "./componants/Header/Header";
 import { Footer } from "./componants/Footer/Footer";
 import { Home } from "./componants/Home/Home";
 import { Presentation } from "./componants/Presentation/Presentation";
+import { Map } from "./componants/Map/Map";
 import { Visite } from "./componants/Visite/Visite";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Loader from "./componants/Loader/Loader";
+import Loader from "./componants/Loader/Loader";
 import styles from "./App.module.scss";
 
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="/stranger-h205">
         <div className={`${styles.main}`}>
           <div className={`${styles.container__particules}`}>
             {Array.from({ length: 100 }, (_, i) => (
@@ -20,12 +21,13 @@ function App() {
             ))}
           </div>
 
-          {/* <Loader /> */}
+          <Loader />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/presentation" element={<Presentation />} />
             <Route path="/visite-3d" element={<Visite />} />
+            <Route path="/map" element={<Map />} />
           </Routes>
           <Footer />
 
@@ -41,11 +43,7 @@ function App() {
                 className={`${styles.red__circle} ${styles.red__circle__3}`}
               ></span>
             </div>
-            <img
-              className={`${styles.img__bg}`}
-              src="public/images/3.PNG"
-              alt=""
-            />
+            <img className={`${styles.img__bg}`} src="images/3.webp" alt="" />
           </div>
         </div>
       </Router>

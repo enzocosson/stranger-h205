@@ -15,7 +15,7 @@ const Loader = () => {
   }, [progress]);
   return (
     <div className={styles.loader}>
-      <img src="/images/logo-title.png" alt="" />
+      <img src="images/logo-title.png" alt="" />
       <p>Chargement...</p>
       <span
         className={styles.progress}
