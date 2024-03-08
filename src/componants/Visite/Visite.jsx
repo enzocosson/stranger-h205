@@ -107,7 +107,7 @@ export function Visite() {
 
           <img
             className={styles.scroll__arrow}
-            src="images/scroll-arrow.png"
+            src="images/scroll-arrow.webp"
             alt=""
           />
         </div>

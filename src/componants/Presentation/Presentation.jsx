@@ -23,7 +23,7 @@ export function Presentation() {
 
           <img
             className={styles.h205__cover}
-            src="images/h205-cover.png"
+            src="images/h205-cover.webp"
             alt="h205-cover"
           />
 
@@ -70,12 +70,12 @@ export function Presentation() {
       <div className={styles.banner}>
         <img
           className={styles.img__banner}
-          src="images/img-banner.png"
+          src="images/img-banner.webp"
           alt="banner"
         />
         <img
           className={styles.banner__logo}
-          src="images/allez-vous-reussir.png"
+          src="images/allez-vous-reussir.webp"
           alt=""
         />
       </div>

@@ -22,7 +22,7 @@ export function Conception() {
     <>
       <div className={styles.container}>
         <div className={styles.conception}>
-          <img className={styles.title} src="images/conception.png" alt="" />
+          <img className={styles.title} src="images/conception.webp" alt="" />
           <p>
             Pour aboutir a ce projet nous avons tout d’abord choisi notre salle,
             la H205 de l’IUT de Troyes, car elle est grande et offre un grand
@@ -57,12 +57,12 @@ export function Conception() {
               <div class={styles.image__container}>
                 <img
                   className={`${styles.image__after} ${styles.slider__image}`}
-                  src="images/scan-lidar.png"
+                  src="images/scan-lidar.webp"
                   alt="black and white"
                 />
                 <img
                   className={`${styles.image__before} ${styles.slider__image}`}
-                  src="images/modelisation-3d.png"
+                  src="images/modelisation-3d.webp"
                   alt="color photo"
                 />
               </div>
@@ -100,7 +100,7 @@ export function Conception() {
               modèles en respectant la contrainte de 40 000 triangles pour
               l'ensemble de la modélisation.
             </p>
-            <img className={styles.brique} src="images/brique.png" alt="" />
+            <img className={styles.brique} src="images/brique.webp" alt="" />
           </div>
 
           <div className={styles.section_text}>
@@ -125,7 +125,7 @@ export function Conception() {
             </p>
             <img
               className={styles.size__glb}
-              src="images/size-glb.png"
+              src="images/size-glb.webp"
               alt=""
             />
           </div>
@@ -144,7 +144,7 @@ export function Conception() {
               virtuel, facilitant ainsi le développement des interactions du
               jeu.
             </p>
-            <img className={styles.xr} src="images/xr.png" alt="" />
+            <img className={styles.xr} src="images/xr.webp" alt="" />
           </div>
 
           <div className={styles.container__section__info__illu}>
