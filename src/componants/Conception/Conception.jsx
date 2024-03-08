@@ -57,7 +57,7 @@ export function Conception() {
               <div class={styles.image__container}>
                 <img
                   className={`${styles.image__after} ${styles.slider__image}`}
-                  src="images/scan-lidar.webp"
+                  src="images/scan-lidar.png"
                   alt="black and white"
                 />
                 <img
