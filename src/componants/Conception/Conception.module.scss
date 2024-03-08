@@ -127,7 +127,7 @@
       width: 30vw;
     }
     p {
-      width: 80%;
+      width: 100%;
       text-align: justify;
       font-size: 0.9rem;
       color: var(--white);
@@ -179,8 +179,14 @@
           position: relative;
           width: 45%;
           img {
-            width: 100%;
+            width: 120%;
             border-radius: 20px;
+            z-index: 10;
+            transition: 0.3s cubic-bezier(0, 1.96, 0.58, 1);
+
+            &:hover {
+              transform: scale(1.3);
+            }
           }
         }
       }

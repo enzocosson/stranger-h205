@@ -150,7 +150,7 @@ export function Conception() {
           <div className={styles.container__section__info__illu}>
             <div className={styles.container__info}>
               <div className={styles.illu}>
-                <img src="images/6.webp" alt="illu-1" />
+                <img src="images/interrupteur.webp" alt="illu-1" />
               </div>
               <div className={styles.info}>
                 <h2 className={styles.h2}>Interaction #1</h2>
@@ -181,13 +181,13 @@ export function Conception() {
                 </p>
               </div>
               <div className={styles.illu}>
-                <img src="images/3.webp" alt="illu-1" />
+                <img src="images/laser.webp" alt="illu-1" />
               </div>
             </div>
 
             <div className={styles.container__info}>
               <div className={styles.illu}>
-                <img src="images/6.webp" alt="illu-1" />
+                <img src="images/tablet.webp" alt="illu-1" />
               </div>
               <div className={styles.info}>
                 <h2 className={styles.h2}>Interaction #3</h2>
@@ -211,13 +211,13 @@ export function Conception() {
                 </p>
               </div>
               <div className={styles.illu}>
-                <img src="images/3.webp" alt="illu-1" />
+                <img src="images/armoire.webp" alt="illu-1" />
               </div>
             </div>
 
             <div className={styles.container__info}>
               <div className={styles.illu}>
-                <img src="images/6.webp" alt="illu-1" />
+                <img src="images/digicode.webp" alt="illu-1" />
               </div>
               <div className={styles.info}>
                 <h2 className={styles.h2}>Interaction #6</h2>

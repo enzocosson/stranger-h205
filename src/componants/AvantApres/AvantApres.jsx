@@ -9,6 +9,7 @@ export function AvantApres() {
   const [mousePosition4, setMousePosition4] = useState(50);
   const [mousePosition5, setMousePosition5] = useState(50);
   const [mousePosition6, setMousePosition6] = useState(50);
+  const [mousePosition7, setMousePosition7] = useState(50);
 
   const handleMouseMove1 = (e) => {
     const containerRect = e.target.getBoundingClientRect();
@@ -52,6 +53,13 @@ export function AvantApres() {
     setMousePosition6(percentage);
   };
 
+  const handleMouseMove7 = (e) => {
+    const containerRect = e.target.getBoundingClientRect();
+    const percentage =
+      ((e.clientX - containerRect.left) / containerRect.width) * 100;
+    setMousePosition7(percentage);
+  };
+
   // ---------------- animation mouse
 
   const [cardStyles, setCardStyles] = useState({
@@ -61,6 +69,7 @@ export function AvantApres() {
     card4: { x: 0, y: 0, rotationX: 0, rotationY: 0 },
     card5: { x: 0, y: 0, rotationX: 0, rotationY: 0 },
     card6: { x: 0, y: 0, rotationX: 0, rotationY: 0 },
+    card7: { x: 0, y: 0, rotationX: 0, rotationY: 0 },
   });
 
   const handleMouseMove = (e) => {
@@ -100,6 +109,12 @@ export function AvantApres() {
         rotationY: (x - centerX) / 100,
       },
       card6: {
+        x: (x - centerX) / 20,
+        y: (y - centerY) / 20,
+        rotationX: (y - centerY) / 100,
+        rotationY: (x - centerX) / 100,
+      },
+      card7: {
         x: (x - centerX) / 20,
         y: (y - centerY) / 20,
         rotationX: (y - centerY) / 100,
@@ -351,6 +366,48 @@ export function AvantApres() {
                 <img
                   className={`${styles.image__before} ${styles.slider__image}`}
                   src="images/before-after/casier-after.webp"
+                  alt="color photo"
+                />
+              </div>
+
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                aria-label="Percentage of before photo shown"
+                class={styles.slider}
+              />
+              <div
+                className={`${styles.slider__line}`}
+                aria-hidden="true"
+              ></div>
+            </div>
+          </div>
+
+          {/* ------------------------------------ separation ------------------------------------  */}
+
+          <div
+            className={`${styles.section_text}`}
+            style={{ perspective: "1000px" }}
+          >
+            <div
+              className={styles.container}
+              style={{
+                "--position": `${mousePosition7}%`,
+                transform: `translate(${cardStyles.card1.x}px, ${cardStyles.card1.y}px) rotateX(${cardStyles.card1.rotationX}deg) rotateY(${cardStyles.card1.rotationY}deg)`,
+              }}
+              onMouseMove={handleMouseMove7}
+            >
+              <div class={styles.image__container}>
+                <img
+                  className={`${styles.image__after} ${styles.slider__image}`}
+                  src="images/before-after/tableau-before.webp"
+                  alt="black and white"
+                />
+                <img
+                  className={`${styles.image__before} ${styles.slider__image}`}
+                  src="images/before-after/tableau-after.webp"
                   alt="color photo"
                 />
               </div>
