@@ -104,7 +104,12 @@ export function Visite() {
       <div className={styles.container}>
         <div className={styles.presentation}>
           <img className={styles.logo} src="images/visite-3d.webp" alt="" />
-          <div className={styles.button}>SCROLL</div>
+
+          <img
+            className={styles.scroll__arrow}
+            src="images/scroll-arrow.png"
+            alt=""
+          />
         </div>
       </div>
       <div ref={bottomRef} className={styles.black__transition}></div>

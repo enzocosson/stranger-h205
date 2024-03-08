@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Home.module.scss";
 
@@ -77,9 +78,15 @@ export function Home() {
             </p>
             <div className={styles.container__btns}>
               <button className={styles.btn__play}>En savoir plus</button>
-              <button className={styles.btn__download}>
+
+              <Link
+                className={styles.btn__download}
+                to="apk/logo-title.webp"
+                target="_blank"
+                download
+              >
                 Télécharger l&apos;APK
-              </button>
+              </Link>
             </div>
           </div>
         </div>

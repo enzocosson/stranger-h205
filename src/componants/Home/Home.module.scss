@@ -21,10 +21,10 @@
 
       .container__text {
         position: relative;
-        width: 80%;
+        width: 72%;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 3vh;
 
         .logo__title {
           width: 111%;
@@ -116,18 +116,24 @@
 
         .btn__play,
         .btn__download {
-          width: 10.5vw;
-          height: 3.5vw;
-          font-size: 0.9vw;
+          width: 9.5vw;
+          height: 3vw;
+          font-size: 0.7vw;
           font-weight: bold;
           text-align: center;
           cursor: pointer;
           border-radius: 8px;
           overflow: hidden;
-          border: 2px solid rgba(212, 40, 45, 0.4588235294);
-          background: linear-gradient(-175deg, #421818, #522d3e);
+          border: none;
+          background: linear-gradient(-5deg, var(--dark-purple), #613b4d);
           color: #fff;
           transition: 0.2s cubic-bezier(0, 0.11, 0.17, 1.9);
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          text-decoration: none;
 
           &:hover {
             transform: scale(1.1);
@@ -136,7 +142,7 @@
 
         .btn__download {
           border: none;
-          background: linear-gradient(-5deg, var(--dark-purple), #613b4d);
+          background: linear-gradient(-175deg, #cd3232, #591e1e);
           color: #fff;
         }
       }
@@ -153,7 +159,7 @@
       .card {
         position: absolute;
         transform: translate(-50%, -50%);
-        height: 34vw;
+        height: 36vw;
         -webkit-drop-shadow: 0 0 20px 0 rgba(255, 0, 0, 0.295);
       }
       .card__1 {
