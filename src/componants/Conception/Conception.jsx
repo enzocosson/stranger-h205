@@ -100,7 +100,7 @@ export function Conception() {
               modèles en respectant la contrainte de 40 000 triangles pour
               l'ensemble de la modélisation.
             </p>
-            <img src="images/brique.png" alt="" />
+            <img className={styles.brique} src="images/brique.png" alt="" />
           </div>
 
           <div className={styles.section_text}>
@@ -144,7 +144,7 @@ export function Conception() {
               virtuel, facilitant ainsi le développement des interactions du
               jeu.
             </p>
-            <img src="images/xr.png" alt="" />
+            <img className={styles.xr} src="images/xr.png" alt="" />
           </div>
 
           <div className={styles.container__section__info__illu}>
