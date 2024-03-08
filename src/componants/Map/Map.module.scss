@@ -369,3 +369,46 @@
     }
   }
 }
+
+.soundConfirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999999999999999999999999;
+  width: 500px;
+  height: 200px;
+  background-color: var(--black);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 0px 20px 0px #ff00003d;
+  color: var(--white);
+
+  .container__button {
+    display: flex;
+    gap: 1rem;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

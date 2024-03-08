@@ -7,9 +7,31 @@ import { Room } from "../Room/Room-comp-max";
 
 import styles from "./Map.module.scss";
 
+const SoundConfirmation = ({ onConfirm }) => {
+  const handleConfirm = () => {
+    onConfirm(true);
+  };
+
+  const handleCancel = () => {
+    onConfirm(false);
+  };
+
+  return (
+    <div className={styles.soundConfirmation}>
+      <p>Voulez-vous activer le son?</p>
+      <div className={styles.container__button}>
+        <button onClick={handleConfirm}>Oui</button>
+        <button onClick={handleCancel}>Non</button>
+      </div>
+    </div>
+  );
+};
+
 export function Map() {
   const [isLoading, setIsLoading] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [showSoundConfirmation, setShowSoundConfirmation] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       if (progress < 100) {
@@ -50,8 +72,30 @@ export function Map() {
     };
   }, []);
 
+  const handleSoundConfirmation = (isConfirmed) => {
+    setShowSoundConfirmation(false);
+    if (isConfirmed) {
+      const audio = new Audio("son/sound.mp3");
+      audio.loop = true;
+      audio.play();
+
+      return () => {
+        audio.pause();
+        audio.currentTime = 0;
+      };
+    }
+  };
+
+  useEffect(() => {
+    setShowSoundConfirmation(true);
+  }, []);
+
   return (
     <>
+      {showSoundConfirmation && (
+        <SoundConfirmation onConfirm={handleSoundConfirmation} />
+      )}
+
       <div
         className={
           isLoading
