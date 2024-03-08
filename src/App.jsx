@@ -1,12 +1,13 @@
 import { Header } from "./componants/Header/Header";
 import { Footer } from "./componants/Footer/Footer";
 import { Home } from "./componants/Home/Home";
-import { Presentation } from "./componants/Presentation/Presentation";
+import { Conception } from "./componants/Conception/Conception";
 import { Map } from "./componants/Map/Map";
 import { Visite } from "./componants/Visite/Visite";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./componants/Loader/Loader";
 import styles from "./App.module.scss";
+import { Presentation } from "./componants/Presentation/Presentation";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/presentation" element={<Presentation />} />
+            <Route path="/conception" element={<Conception />} />
             <Route path="/visite-3d" element={<Visite />} />
             <Route path="/map" element={<Map />} />
           </Routes>

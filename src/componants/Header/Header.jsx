@@ -30,12 +30,12 @@ export function Header() {
             Visite 3D
           </NavLink>
           <NavLink
-            to="/explication"
+            to="/conception"
             className={`${styles.link} ${
-              location.pathname === "/explication" ? styles.activeLink : ""
+              location.pathname === "/conception" ? styles.activeLink : ""
             }`}
           >
-            Explication
+            Conception
           </NavLink>
           <NavLink
             to="/demo"
