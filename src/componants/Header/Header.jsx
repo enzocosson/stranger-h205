@@ -38,20 +38,20 @@ export function Header() {
             Conception
           </NavLink>
           <NavLink
+            to="/avant-apres"
+            className={`${styles.link} ${
+              location.pathname === "/avant-apres" ? styles.activeLink : ""
+            }`}
+          >
+            Avant/Après
+          </NavLink>
+          <NavLink
             to="/demo"
             className={`${styles.link} ${
               location.pathname === "/demo" ? styles.activeLink : ""
             }`}
           >
             Démo
-          </NavLink>
-          <NavLink
-            to="/telechargement"
-            className={`${styles.link} ${
-              location.pathname === "/telechargement" ? styles.activeLink : ""
-            }`}
-          >
-            Téléchargement
           </NavLink>
         </div>
       </div>

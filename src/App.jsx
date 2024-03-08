@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./componants/Loader/Loader";
 import styles from "./App.module.scss";
 import { Presentation } from "./componants/Presentation/Presentation";
+import { AvantApres } from "./componants/AvantApres/AvantApres";
+import { Demo } from "./componants/Demo/Demo";
 
 function App() {
   return (
@@ -28,7 +30,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/presentation" element={<Presentation />} />
             <Route path="/conception" element={<Conception />} />
+            <Route path="/avant-apres" element={<AvantApres />} />
             <Route path="/visite-3d" element={<Visite />} />
+            <Route path="/demo" element={<Demo />} />
             <Route path="/map" element={<Map />} />
           </Routes>
           <Footer />
