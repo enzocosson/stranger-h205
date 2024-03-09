@@ -81,7 +81,7 @@ export function Home() {
 
               <Link
                 className={styles.btn__download}
-                to="apk/logo-title.webp"
+                to="https://mega.nz/file/IeUVFSxK#QgGXuJsdhG3MNzeSK6phsENG_4D3_XSWf1XiEzQ8EoY"
                 target="_blank"
                 download
               >
