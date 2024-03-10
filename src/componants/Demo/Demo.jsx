@@ -26,12 +26,12 @@ export function Demo() {
           <iframe
             width="500"
             height="259"
-            src="https://www.youtube.com/embed/DrLT1TpwMms?si=S8CXCBZnJZkool3C"
+            src="https://www.youtube.com/embed/l-pgppGhrRk?si=lXvPrULi5s9a7WYg"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
-            styles={{ borderRadius: "20px" }}
+            styles={{ borderRadius: "20px !important" }}
           ></iframe>
         </div>
       </div>
